@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_gragh"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.kimdo.bottomnavtest.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragment_info"
+        android:name="com.kimdo.bottomnavtest.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/to_infoChild"
+            app:destination="@id/fragment_info_child" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_setting"
+        android:name="com.kimdo.bottomnavtest.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/to_fragment_info"
+            app:destination="@id/fragment_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_info_child"
+        android:name="com.kimdo.bottomnavtest.InfoChildFragment"
+        android:label="fragment_info_child"
+        tools:layout="@layout/fragment_info_child" />
+</navigation>
